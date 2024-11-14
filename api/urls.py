@@ -1,12 +1,18 @@
-from django.urls import path, include
 from rest_framework import routers
-from .views import TaskView
+from .views import UserViewSet, UserProfileViewSet, PlaceCategoryViewSet, TouristPlaceViewSet, ItineraryViewSet, ReviewViewSet
 
 router = routers.DefaultRouter()
-router.register(r'tasks', TaskView, 'task')
 
+router.register('api/users', UserViewSet, 'users')
 
+router.register('api/user_profiles', UserProfileViewSet, 'user_profiles')
 
-urlpatterns = [
-    path('api/v1', include(router.urls))
-]
+router.register('api/place_categories', PlaceCategoryViewSet, 'place_categories')
+
+router.register('api/tourist_places', TouristPlaceViewSet, 'tourist_places')
+
+router.register('api/itineraries', ItineraryViewSet, 'itineraries')
+
+router.register('api/reviews', ReviewViewSet, 'reviews')
+
+urlpatterns = router.urls
