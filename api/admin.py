@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Users, User_profiles, User_preferences, Place_categories, Tourist_places, Place_schedules, Special_events, Itineraries, ItineraryDetail, Reviews, Realtime_data
+from .models import Users, User_profiles, User_preferences, Place_categories, Tourist_places, Place_schedules, Special_events, Itineraries, ItineraryDetail, Reviews, Realtime_data, Usage_statistics
 
 # Register your models here.
 
@@ -14,3 +14,4 @@ admin.site.register(Itineraries)
 admin.site.register(ItineraryDetail)
 admin.site.register(Reviews)
 admin.site.register(Realtime_data)
+admin.site.register(Usage_statistics)
