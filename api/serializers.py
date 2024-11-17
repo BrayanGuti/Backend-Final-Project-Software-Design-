@@ -9,7 +9,8 @@ class UserSerializer(serializers.ModelSerializer):
                   'first_name', 
                   'last_name', 
                   'created_at', 
-                  'last_login', 
+                  'last_login',
+                  'password_hash', 
                   'account_status']
         read_only_fields = ['user_id', 'created_at', 'last_login']
 
